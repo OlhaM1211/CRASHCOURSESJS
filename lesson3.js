@@ -150,4 +150,4 @@ const getAge = (obj, key) => {
     return result;
 }
 
-console.log(getAge(human, 'age')) 
+console.log(getAge(human, 'age'))
