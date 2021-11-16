@@ -130,7 +130,7 @@ const boy = {
 const boy1 = {
     name1: 'Tony',
     height: 1.55,
-    age:20
+    age: 20
     }
 const boy2 = Object.assign(boy, boy1)
 console.log(boy2) // Result --- { name1: 'Tony', height: 1.55, age: 20 }
