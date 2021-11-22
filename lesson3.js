@@ -54,7 +54,11 @@ console.log(human)
 delete human.age
 console.log(human)
 
-// КОРОТКИЕ СВОЙСТВА 
+// КОРОТКІ ВЛАСИВОСТІ
+const human = {
+    name1: 'Bobby',
+    age: 15,
+};
 
 const getHuman = (name1, age) => {
     return {

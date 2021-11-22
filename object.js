@@ -35,8 +35,9 @@ if (dog.hasHotDog) {
 dog.speak = 'Woof!'
 
 console.log(dog)
-
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // ЯК СТВОРИТИ ОБ'ЄКТИ?
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 // create with an object literal
 
@@ -50,40 +51,79 @@ const cat2 = {
     speak: () => console.log('Mau! Mau!')
 }
 
-// with constructor
-
-//const cat3 = newObject ()
-
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // РОЗШИРЕННЯ ОБ'ЄКТА НОВИМИ ВЛАСТИВОСТЯМИ
-
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 const cat1 = {
     friendly: true,
     speak: () => console.log('Mau! Mau!')
 };
-
+// =======================
 // adding new property name
+// ========================
 cat1.name2 = 'Bob';
 
+// =================
 // adding new method
+// =================
 cat1['run'] = () => console.log('Run')
-
 console.log(cat1)
 
+// =======================================================================================================
 // Редагування властивостей об'єкта
-
+// =======================================================================================================
 const dog1 = {
     name1: 'Teddy',
     friendly: true,
     speak: () => console.log('Woof!Woof!'),
     likeCats: true
 }
-// adding a new property name
 dog1.name1 = 'Rex'
-
-//removing a property
+// ==================
+// видалення властивостей
+// ==================
 delete dog1.likeCats
 console.log(dog1)
 
+// =======================================================================================================
+//доступ до властивостей - виклик властивостей
+// =======================================================================================================
+
+const key = 'name1'
+console.log(dog1[key]);
+console.log(dog1.name1);
+console.log(dog1['name1']);
+// =======================================================================================================
+// РОБОТА З НЕІСНУЮЧИМИ КЛЮЧАМИ І СТВОРЕННЯ ПІСЛЯ ОГОЛОШЕННЯ ОБ"ЄКТУ
+// =======================================================================================================
+console.log(human.dgdg)
+human.dgdg = 345
+console.log(human.dgdg)
+
+console.log(Object.keys(human).includes('age'))
+console.log(Object.keys(human).includes('dgdg'))
+console.log(Object.keys(human).includes('dg'))
+
+if (human && human.dg) {
+    console.log(human.name1);  // ???
+    }
+// ===========================================================================================
+// КОРОТКІ ВЛАСИВОСТІ
+// ==========================================================================================
+    const human = {
+        name1: 'Bobby',
+        age: 15,
+    };
+    
+    const getHuman = (name1, age) => {
+        return {
+            name1: name1, //eslint-disabbe-line
+            age: age, //eslint-disabbe-line
+        };
+    };
+    
+    console.log(getHuman('Bobby', 15))
+    
 // ОСНОВНІ МЕТОДИ ДЛЯ РОБОТИ З ОБ'ЄКТАМИ
 
 // Метод Object.assign()- копіює значення всіх перерахованих власних властивостей з одного або декількох вихідних об’єктів на цільовий об’єкт;
